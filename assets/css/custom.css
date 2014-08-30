@@ -1,0 +1,115 @@
+body{
+	font-size:12px;
+    background: url("../images/others/texture.jpg") 100% 100%;
+}
+.signbox {
+    background:#58595B;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 50px;
+	color:#FFF;
+}
+input[type="text"]:focus, 
+input[type="password"]:focus, 
+input[type="email"]:focus, 
+textarea:focus{
+   box-shadow: 0 0 15px #32a2c8;
+   border-color: #32a2c8;
+   background: none repeat scroll 0 0 #fff;
+}
+/***/
+.signbox input[type="text"], 
+input[type="password"],
+input[type="email"],
+#txtEmailAddress{
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    color: #333;
+    padding: 7px;
+    width: 250px;
+}
+
+input[type="text"], 
+input[type="password"], 
+input[type="number"],
+input[type="email"] {
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(50, 50, 50, 0.3) inset;
+    color: #333;
+    padding: 5px;
+}
+/***/
+.signbox input[type="text"],
+.signbox input[type="password"],
+.signbox input[type="email"]
+{
+    opacity: 0.5;
+}
+.signbox input[type="text"]:hover,
+.signbox input[type="password"]:hover,
+.signbox input[type="email"]:hover{
+    opacity: 0.7;
+}
+.signbox input[type="text"]:focus,
+.signbox input[type="password"]:focus,
+.signbox input[type="email"]:focus{
+    opacity: 1;
+    -webkit-transition: opacity 1s; /* For Safari 3.1 to 6.0 */
+    transition: opacity 1s;
+    -moz-transition: opacity 1s;
+}
+.signbox h2 {
+    background-image:url(../images/others/mws-login-stitch.png);
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    color: #FFFFFF;
+    font-size: 18px;
+    margin: 0;
+    padding: 0 8px 8px;
+    position: relative;
+}
+#forgotPassword a{
+    color: #DBEAF9;
+    text-shadow:1px 1px #AABCCF; 
+}
+#forgotPassword a:hover{
+    color: #FD6861;
+    text-shadow:1px 1px #A43124;
+}
+.footerMD {
+    background: url("../images/others/footer_stripe.png") repeat-x scroll right top #58595b;
+    color: #fff;
+    float: left;
+    margin-top: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.dfobigna {  
+    color: #bdbdbd;
+    float: left;
+    font-family: 'Open Sans Condensed',sans-serif;
+    font-size: 14px;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+.bo-logo{
+    background: white;    
+    border: 2px solid;
+    border-radius: 34px;
+    margin-top: -7px;
+    padding: 3px 12px;
+    width: 120px;
+}
+.bo-logo:hover{    
+    background: #D81E25;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #ccc;
+    text-shadow:0 1px 0 rgba(255, 255, 255, 0.25);
+}
+.form-control:focus{
+    width: 250px;    
+}

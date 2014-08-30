@@ -1,0 +1,18 @@
+.user-pic{
+	border: 5px solid white;
+    clear: both;
+    float: left;
+    height: 60px;
+    margin-right: 10px;
+    width: 60px;
+}
+.content{
+	//text-align: justify;
+}
+a,img{
+	outline: none;
+	border: none;
+}
+.navbar-nav.navbar-right.userdetails:last-child{
+	margin-right: 0px;
+}
