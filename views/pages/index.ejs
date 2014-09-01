@@ -17,7 +17,7 @@
 				<tr>
 					<td>
 						<form action="#" method="post">
-							<textarea class="form-control" rows="3" required>Write your Tweet...</textarea>
+							<textarea class="form-control" rows="3" required placeholder="Write your Tweet..."></textarea>
 							<input type="submit" class="btn btn-primary pull-right" style="margin-top:10px;" value="POST" />
 						</form>
 					</td>
@@ -41,8 +41,8 @@
 							</div>
 							<div class="pull-right">
 								<ul class="comments nav navbar-nav pull-left">
-									<li><a href="#" data-toggle="tooltip" data-original-title="Remove Favourite" class="glyphicon glyphicon-star tooltip-title"></a></li>
-									<li><a href="#">Like<span>(105)</span></a></li>
+									<li><a href="javascript:void(0)" data-toggle="tooltip" data-original-title="Remove Favourite" class="glyphicon glyphicon-star tooltip-title favourite"></a></li>
+									<li><a href="javascript:void(0)">Like<span>(105)</span></a></li>
 									<li><a href="javascript:void(0)" class="ind-reply" data-toggle="modal" data-target=".bs-example-modal-lg">Reply</a></li>
 								</ul>
 							</div>
@@ -68,8 +68,8 @@
 							</div>
 							<div class="pull-right">
 								<ul class="comments nav navbar-nav pull-left">
-									<li><a href="#" data-toggle="tooltip" data-original-title="Mark as Favourite" class="glyphicon glyphicon-star-empty tooltip-title"></a></li>
-									<li><a href="#">Like<span>(32)</span></a></li>
+									<li><a href="javascript:void(0)" data-toggle="tooltip" data-original-title="Mark as Favourite" class="glyphicon glyphicon-star-empty tooltip-title favourite"></a></li>
+									<li><a href="javascript:void(0)">Like<span>(32)</span></a></li>
 									<li><a href="javascript:void(0)" class="ind-reply" data-toggle="modal" data-target=".bs-example-modal-lg">Reply</a></li>
 								</ul>
 							</div>
@@ -88,7 +88,7 @@
           <h4 class="modal-title" id="replyCommentBlockLabel">Tweet your Reply</h4>
         </div>
         <div class="modal-body">
-           <textarea class="form-control" rows="3" required>Please mention your Tweet...</textarea>
+           <textarea class="form-control" rows="3" required placeholder="Please mention your Tweet..."></textarea>
            <input type="submit" class="btn btn-primary pull-right" style="margin-top:10px;" value="Reply" />
            <br /><br />
         </div>

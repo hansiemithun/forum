@@ -16,3 +16,17 @@ a,img{
 .navbar-nav.navbar-right.userdetails:last-child{
 	margin-right: 0px;
 }
+.placeholder{
+  color: #aaa;
+}
+span.tag:hover{
+	cursor: pointer;
+	background: #3886B1;
+}
+
+.comments li,
+.comments li a
+{
+	outline: none;
+	border: none;
+}
