@@ -30,3 +30,8 @@ span.tag:hover{
 	outline: none;
 	border: none;
 }
+.table.unbordered th,
+.table.unbordered td,
+.table.unbordered tr{
+ 	border: none;
+}

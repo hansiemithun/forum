@@ -3,7 +3,7 @@ define(['bootstrap','jquery'],function(bootstrap,$){
 	$('.tooltip-title').tooltip();
 
 	//POPUP MODAL WINDOWS
-	$('.modal').modal('hide');
+	$('.modal').modal('hide');	
 
 	// HTML5 PLACEHOLDERS
 	$('[placeholder]').focus(function() {

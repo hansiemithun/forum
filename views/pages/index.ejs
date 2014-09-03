@@ -41,9 +41,8 @@
 							</div>
 							<div class="pull-right">
 								<ul class="comments nav navbar-nav pull-left">
-									<li><a href="javascript:void(0)" data-toggle="tooltip" data-original-title="Remove Favourite" class="glyphicon glyphicon-star tooltip-title favourite"></a></li>
-									<li><a href="javascript:void(0)">Like<span>(105)</span></a></li>
-									<li><a href="javascript:void(0)" class="ind-reply" data-toggle="modal" data-target=".bs-example-modal-lg">Reply</a></li>
+									<li><a href="javascript:void(0)" data-toggle="tooltip" data-original-title="Remove Favourite" class="glyphicon glyphicon-star tooltip-title favourite"></a></li> <li><a href="javascript:void(0)">Like<span>(105)</span></a></li>
+									<li><a href="javascript:void(0)" class="ind-reply" data-toggle="modal" data-target=".reply-comment-block">Reply</a></li>
 								</ul>
 							</div>
 						</div>						
@@ -70,7 +69,7 @@
 								<ul class="comments nav navbar-nav pull-left">
 									<li><a href="javascript:void(0)" data-toggle="tooltip" data-original-title="Mark as Favourite" class="glyphicon glyphicon-star-empty tooltip-title favourite"></a></li>
 									<li><a href="javascript:void(0)">Like<span>(32)</span></a></li>
-									<li><a href="javascript:void(0)" class="ind-reply" data-toggle="modal" data-target=".bs-example-modal-lg">Reply</a></li>
+									<li><a href="javascript:void(0)" class="ind-reply" data-toggle="modal" data-target=".reply-comment-block">Reply</a></li>
 								</ul>
 							</div>
 						</div>					
@@ -80,21 +79,54 @@
 		</div>
 	</div>	
 
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="replyCommentBlockLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title" id="replyCommentBlockLabel">Tweet your Reply</h4>
-        </div>
-        <div class="modal-body">
-           <textarea class="form-control" rows="3" required placeholder="Please mention your Tweet..."></textarea>
-           <input type="submit" class="btn btn-primary pull-right" style="margin-top:10px;" value="Reply" />
-           <br /><br />
-        </div>
-      </div>
-  </div>
-</div>
+	<div class="modal fade reply-comment-block" tabindex="-1" role="dialog" aria-labelledby="replyCommentBlockLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg">
+	    <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+	          <h4 class="modal-title" id="replyCommentBlockLabel">Tweet your Reply</h4>
+	        </div>
+	        <div class="modal-body">
+	           <textarea class="form-control" rows="3" required placeholder="Please mention your Tweet..."></textarea>
+	           <input type="submit" class="btn btn-primary pull-right" style="margin-top:10px;" value="Reply" />
+	           <br /><br />
+	        </div>
+	      </div>
+	  </div>
+	</div>
+	<div class="modal fade user-profile-block" tabindex="-1" role="dialog" aria-labelledby="userProfileBlock" aria-hidden="true">
+	  <div class="modal-dialog modal-me">
+	    <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+	          <h4 class="modal-title" id="replyCommentBlockLabel">User Profile</h4>
+	        </div>
+	        <div class="modal-body">
+	        	<form action="/users" method="get">
+		            <table class="table tweets-table table-responsive unbordered">
+						<tr>
+							<th>Username</th>
+							<td><input type="text" name="firstname" class="form-control" placeholder="Username" required /></td>
+						</tr>
+						<tr>
+							<th>Email</th>
+							<td><input type="email" name="email" class="form-control" placeholder="Email" required /></td>
+						</tr>
+						<tr>
+							<th>Password</th>
+							<td><input type="password" name="pwd" class="form-control" placeholder="Password" required /></td>
+						</tr>
+						<tr>
+							<td align="center" colspan="2">
+								<input type="submit" class="btn btn-primary" value="Save">
+							</td>						
+						</tr>
+					</table>
+				</form>
+	        </div>
+	      </div>
+	  </div>
+	</div>
 </main>
 
 <footer>
