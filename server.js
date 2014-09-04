@@ -1,6 +1,7 @@
 // load the things we need
 var express = require('express');
 var bodyParser = require('body-parser');
+var bcrypt = require('bcrypt-nodejs');
 var app = express();
 var port = 8080;
 // Declare usefull stuff for DB purposes
@@ -9,7 +10,12 @@ mongoose.connect('mongodb://localhost/tweets');
 var Schema = mongoose.Schema;
 var ObjectId = Schema.ObjectId;
 
-app.use(bodyParser());
+//BODY PARSER CHANGED AFTER VERSION 4 OF EXPRESSJS
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+
 var User = require('./models/users.js').make(Schema, mongoose);
 // set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -31,18 +37,26 @@ app.get('/', function(req, res) {
 
 
 app.get('/users', function(req, res) {
+	var pwd,hashpwd;
 	var u = new User();
-	u.firstName = req.query.firstname;
-    u.email = req.query.email;
-    u.password  =  req.query.password;
-    u.save();
-	console.log(req.params, req.body, req.query);
+		
+    pwd 		= req.query.pwd;
+    hashpwd 	= bcrypt.hashSync(pwd);
+
+    u.firstName = req.query.firstname;
+    u.email 	= req.query.email;
+    u.password  =  hashpwd;
+        
+	console.log(req.params, req.body, req.query, hashpwd);
+	u.save();
+	//res.render('pages/about');
 });
 
 // about page 
 app.get('/about', function(req, res) {
 	res.render('pages/about');
 });
+
 function isEmpty(obj) {
 
     // null and undefined are "empty"
@@ -62,5 +76,6 @@ function isEmpty(obj) {
 
     return true;
 }
+
 app.listen(port);
 console.log('application is listening in port : ' + port);
